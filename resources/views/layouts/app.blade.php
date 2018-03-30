@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{{--  laravel default index page with login--}}
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
