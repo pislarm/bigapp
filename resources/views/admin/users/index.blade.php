@@ -10,6 +10,7 @@
     <thead>
       <tr>
         <th>Id</th>
+        <td>Photo</td>
         <th>Name</th>
         <th>Email</th>
         <th>Role</th>
@@ -23,6 +24,7 @@
         @foreach ($users as $user)
           <tr>
             <td>{{$user->id}}</td>
+            <td><a href="{{route('users.edit', $user->id)}}"><img class="thumbnail" height="50" src="{{$user->photo ? $user->photo->file : 'http://placehold.it/500x500'}}" alt=""></td>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
             <td>{{$user->role->name}}</td>
@@ -30,6 +32,7 @@
             <td>{{$user->created_at->diffForHumans()}}</td>
             <td>{{$user->updated_at}}</td>
           </tr>
+        </a>
         @endforeach
       @endif
     </tbody>
