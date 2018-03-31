@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class AdminUsersController extends Controller
 {
@@ -13,8 +13,9 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.users.index');
+        // don't forget to include the class on top
+        $users = User::all();
+        return view('admin.users.index', compact('users'));
     }
 
     /**

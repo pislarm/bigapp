@@ -1,4 +1,5 @@
 <!doctype html>
+{{-- laravel layout --}}
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
