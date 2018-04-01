@@ -3,6 +3,12 @@
 
 @section('content')
 
+  @if (Session::has('deleted_user'))
+    <div class="alert alert-success" role="alert">
+    {{session('deleted_user')}}
+    </div>
+  @endif
+
   <h1>Users</h1>
 
 <div class="col-xs-6">
