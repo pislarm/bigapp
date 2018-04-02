@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UsersRequest;
 use App\Http\Requests\UsersEditRequest;
+use App\Post;
 use App\Photo;
 use App\User;
 use App\Role;
@@ -129,7 +130,11 @@ class AdminUsersController extends Controller
     public function destroy($id)
     {
         //
-        User::findOrFail($id)->delete();
+        $user = User::findOrFail($id);
+
+        unlink(public_path() . $user->photo->file);
+
+        $user->delete();
 
         Session::flash('deleted_user', 'the suer has been deleted');
 

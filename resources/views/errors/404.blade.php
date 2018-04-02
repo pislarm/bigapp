@@ -1,1 +1,6 @@
-<h1>Cusom 404</h1>
+@extends('layouts.app')
+
+@section('content')
+
+  <h1 class="text-center">no page avaialble</h1>
+@endsection
