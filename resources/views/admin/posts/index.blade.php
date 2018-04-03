@@ -7,10 +7,10 @@
     <thead>
       <tr>
         <th>Id</th>
-        <th>User</th>
+        <th>Photo</th>
+        <th>User Id</th>
         <th>USer name</th>
         <th>CAtegory</th>
-        <th>Photo</th>
         <th>Title</th>
         <th>body</th>
         <th>Created</th>
@@ -23,10 +23,10 @@
 
       <tr>
         <td>{{$post->id}}</td>
+        <td><img src="{{$post->photo ? $post->photo->file : 'http://placehold.it/100x100'}}"></td>
         <td>{{$post->user_id}}</td>
         <td>{{$post->user->name}}</td>
-        <td>{{$post->category_id}}</td>
-        <td>{{$post->photo_id}}</td>
+        <td>{{$post->category ? $post->category->column : 'uncategorised'}}</td>
         <td>{{$post->title}}</td>
         <td>{{$post->body}}</td>
         <td>{{$post->created_at->diffForHumans()}}</td>
