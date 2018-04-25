@@ -13,7 +13,6 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
-
     <link href="{{asset('css/libs.css')}}" rel="stylesheet">
 
 
@@ -148,6 +147,10 @@
                                 <a href="{{route('posts.create')}}">Create Post</a>
                             </li>
 
+                            <li>
+                                <a href="{{route('comments.index')}}">Comments</a>
+                            </li>
+
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -185,20 +188,13 @@
                     </li>
 
 
-
-
-
-
-
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Comments<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Flot Charts</a>
+                                <a href="flot.html">All Commetns</a>
                             </li>
-                            <li>
-                                <a href="morris.html">Morris.js Charts</a>
-                            </li>
+
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
