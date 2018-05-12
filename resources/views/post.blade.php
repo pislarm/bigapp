@@ -23,6 +23,11 @@
   <img class="img-responsive" src="{{$post->photo->file}}" alt="">
 
   <hr>
+  @if(Session::has('new_comment'))
+    <div class="alert alert-info">
+    {{session('new_comment')}}
+    </div>
+  @endif
 
   <!-- Post Content -->
   <p class="lead">{{$post->body}}</p>
@@ -35,6 +40,8 @@
       <h4>Leave a Comment:</h4>
 
       {!! Form::open(['method'=>'POST', 'action'=>'PostCommentsController@store']) !!}
+
+      <input type="hidden" name="post_id" value="{{$post->id}}">
 
       <div class="form-group">
           {!! Form::label('body', 'Body:') !!}

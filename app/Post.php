@@ -8,7 +8,12 @@ class Post extends Model
 {
     //
     protected $fillable = [
-        'category_id','photo_id','title', 'body'
+        'user_id',
+        'category_id',
+        'photo_id',
+        'title',
+        'body',
+        'post_id'
     ];
 
     public function user(){
@@ -24,6 +29,6 @@ class Post extends Model
     }
 
     public function comments(){
-      return $this->hasMany('App\Post');
+      return $this->hasMany('App\Comment');
     }
 }

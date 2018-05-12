@@ -192,7 +192,7 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Comments<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">All Commetns</a>
+                                <a href="{{route('comments.index')}}">All Comments</a>
                             </li>
 
                         </ul>
