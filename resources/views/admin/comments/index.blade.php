@@ -17,6 +17,7 @@
         <th>Body</th>
         <th>Created</th>
         <th>View post</th>
+        <td>Replies</td>
       </tr>
     </thead>
     <tbody>
@@ -31,6 +32,7 @@
             <td>{{$comment->body}}</td>
             <td>{{$comment->created_at}}</td>
             <td><a href="{{route('home.post', $comment->post->id)}}">View Post</a></td>
+            <td><a href="{{route('replies.show', $comment->id)}}">View Replies</a></td>
 
             <td>
               @if ($comment->is_active == 1)

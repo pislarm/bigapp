@@ -1,22 +1,23 @@
 <?php
 
 namespace App;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Database\Eloquent\Model;
 
 class CommentReply extends Model
 {
     //
-    protected $filalble = [
-      'comment_id',
-      'author',
-      'email',
-      'body',
-      'is_active',
-
+    protected $fillable = [
+    	'comment_id',
+    	'is_active',
+    	'author',
+      'photo',
+    	'email',
+    	'body'
     ];
 
-    public function comment(){
-      $this->belongsTo('App\Comment');
+    public function comment (){
+    	return $this->belongsTo('App\Comment');
     }
 }
